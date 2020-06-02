@@ -1,0 +1,28 @@
+{
+  "name": "instructional-cloud",
+  "version": "1.0.0",
+  "description": "## Install and start local host",
+  "main": "graphql.js",
+  "module": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r esm src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.14.1",
+    "apollo-server-lambda": "^2.14.1",
+    "casual": "^1.6.2",
+    "esm": "^3.2.25",
+    "graphql": "^15.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.8.0",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.5.8",
+    "mongoose": "^5.9.17",
+    "sequelize": "^5.21.11",
+    "sqlite": "^4.0.9"
+  }
+}
