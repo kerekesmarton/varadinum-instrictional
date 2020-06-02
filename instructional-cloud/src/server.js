@@ -1,4 +1,4 @@
-
+// https://auth0.com/blog/develop-modern-apps-with-react-graphql-apollo-and-add-authentication/
 const { ApolloServer, gql } = require('apollo-server');
 const { find, filter } = require('lodash');
 
