@@ -79,6 +79,15 @@ const removeDocument = function(db, callback) {
   });    
 }
 
+const removeAll = function(db, callback) {
+
+  const collection = db.collection('documents');
+  // Delete document where a is 3
+  collection.findDocuments( function(db, results) {
+    collection.deleteOne();
+  })
+}
+
 const indexCollection = function(db, callback) {
   db.collection('documents').createIndex(
     { "a": 1 },
@@ -97,12 +106,8 @@ client.connect(function(err) {
 
   const db = client.db(dbName);
 
-  insertDocuments(db, function() {
-    indexCollection(db, function() {
-      findDocuments(db, function() {
-        client.close();
-      });
-    });
+  removeAll(db, function() {
+    client.close();
   });
 });
 
